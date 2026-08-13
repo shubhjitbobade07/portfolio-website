@@ -1,4 +1,4 @@
-import { FileText, MapPin, Briefcase, Code, Clock, UserCheck } from 'lucide-react';
+import { FileText, MapPin, Briefcase, Code, Clock } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 import resumePdf from '../assets/Shubhjit_Resume_2026-08_A.pdf';
 

@@ -1,4 +1,4 @@
-import { Calendar, Building, Sparkles, Code2 } from 'lucide-react';
+import { Calendar, Building, Sparkles } from 'lucide-react';
 import { experiences } from '../data/portfolioData';
 
 export default function Experience() {

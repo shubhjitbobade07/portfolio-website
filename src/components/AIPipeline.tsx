@@ -1,4 +1,4 @@
-import { ArrowRight, Image, Sparkles, Database, FileVideo, Cpu, Layers } from 'lucide-react';
+import { ArrowRight, Image, Sparkles, Database, Cpu, Layers } from 'lucide-react';
 
 export default function AIPipeline() {
   const steps = [

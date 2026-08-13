@@ -1,4 +1,4 @@
-import { Code2, Target, Heart } from 'lucide-react';
+import { Code2, Target } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function About() {

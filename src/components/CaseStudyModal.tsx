@@ -1,4 +1,4 @@
-import { X, Award, Lightbulb, Compass, Wrench, ShieldCheck } from 'lucide-react';
+import { X, Award, Lightbulb, Wrench, ShieldCheck } from 'lucide-react';
 import { Project } from '../data/portfolioData';
 
 interface CaseStudyModalProps {
