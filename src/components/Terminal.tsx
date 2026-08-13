@@ -14,8 +14,15 @@ export default function Terminal() {
   const terminalEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Only scroll when a command has been entered (lines.length > 1).
+    // The initial state always has exactly 1 welcome message, so this guard
+    // is safe against React Strict Mode's double-mount which would otherwise
+    // fire scrollIntoView on mount and pull the page to the Terminal section.
+    if (lines.length <= 1) return;
+    // block:'nearest' scrolls only the terminal's inner overflow box, not the page.
+    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }, [lines]);
+
 
   const handleCommand = (e: React.FormEvent) => {
     e.preventDefault();

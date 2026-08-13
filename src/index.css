@@ -58,11 +58,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-delay: 0s !important;
-    animation-duration: 0s !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0s !important;
+  /* Let Framer Motion's useReducedMotion hook handle its own animations.
+     Only suppress CSS scroll-behavior and non-Framer CSS transitions here. */
+  html {
     scroll-behavior: auto !important;
+  }
+  /* Suppress Tailwind CSS transitions (hover effects etc.) but NOT animations,
+     because Framer Motion v11 uses the WAAPI which is classified as animations. */
+  *:not([data-projection-id]) {
+    transition-duration: 0.01ms !important;
   }
 }
